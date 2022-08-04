@@ -1,0 +1,94 @@
+body {
+  height: 800px;
+  background-image: url("https://c.static-nike.com/a/images/w_1920,c_limit/mdbgldn6yg1gg88jomci/image.jpg");
+  background-position: center;
+
+  background-blend-mode: darken;
+}
+.nav__links {
+  list-style: none;
+}
+.nav__links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav__links li a {
+  transition: all 1.5 ease 0s;
+  color: #edf0f1;
+}
+.nav__links img {
+  height: 120px;
+  width: 200px;
+  margin-right: 280px;
+}
+.nav__links li a:hover {
+  color: #0088a9;
+  transition-duration: 1s;
+}
+.item-title {
+  color: aliceblue;
+  font-family: "Fira Sans", sans-serif;
+}
+.titulo {
+  font-family: "Fira Sans", sans-serif;
+  color: aliceblue;
+  margin-left: 50px;
+  margin-bottom: 10px;
+}
+.store {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.item-image {
+  height: 320px;
+  width: 300px;
+}
+.item-price {
+  color: aliceblue;
+  margin-right: 100px;
+}
+.item-details {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.item-details > .item-price {
+  margin: 0;
+}
+
+/* ? SHOPPING CART */
+.shopping-cart-items {
+  padding: 20px 0px;
+}
+.shopping-cart {
+  color: aliceblue;
+}
+.shopping-cart-header {
+  border-bottom: 1px solid #ccc;
+}
+
+.shopping-cart-image {
+  max-width: 80px;
+  border-radius: 20px;
+}
+
+.shopping-cart-quantity-input {
+  max-width: 45px;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 5px;
+  background: #eee;
+  padding: 5px;
+}
+
+.shopping-cart-total {
+  min-height: 96px;
+}
+.modal-title {
+  color: black;
+}
+.modal-body {
+  color: black;
+}
