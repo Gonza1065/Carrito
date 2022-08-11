@@ -82,7 +82,7 @@ function updateShoppingCartTotal() {
       ".shoppingCartItemPrice"
     );
     const shoppingCartItemPrice = Number(
-      shoppingCartItemPriceElement.textContent.replace("€", "")
+      shoppingCartItemPriceElement.textContent.replace("$", "")
     );
     const shoppingCartItemQuantityElement = shoppingCartItem.querySelector(
       ".shoppingCartItemQuantity"
@@ -92,7 +92,7 @@ function updateShoppingCartTotal() {
     );
     total = total + shoppingCartItemPrice * shoppingCartItemQuantity;
   });
-  shoppingCartTotal.innerHTML = `${total.toFixed(2)}€`;
+  shoppingCartTotal.innerHTML = `$${total.toFixed(2)}`;
 }
 function removeShoppingCartItem(event) {
   const buttonClicked = event.target;
@@ -109,4 +109,25 @@ function comprarButtonClicked() {
   shoppingCartItemsContainer.innerHTML = "";
   updateShoppingCartTotal();
 }
-Swal.fire('¡Agrega al carrito la prenda que quieras!')
+Swal.fire("¡Agrega al carrito la prenda que quieras!");
+
+const lista = document.querySelector('div');
+fetch('/data.json')
+  .then((resinicial) => resinicial.json())
+  .then((data) => {
+    data.forEach((nombre) => {
+      const li = document.createComment("div");
+      div.innerHTML = `
+
+
+        <h4>${nombre.nombre}</h4>
+          <p>${nombre.precio}</p>
+          <p>${nombre.id}</p> 
+      `;
+    });
+
+    lista.append(li);
+  })
+  .catch((e) => {
+    console.log(e);
+  });
