@@ -1,9 +1,8 @@
 body {
-  height: 800px;
-  background-image: url("https://c.static-nike.com/a/images/w_1920,c_limit/mdbgldn6yg1gg88jomci/image.jpg");
-  background-position: center;
-
-  background-blend-mode: darken;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://c.static-nike.com/a/images/w_1920,c_limit/mdbgldn6yg1gg88jomci/image.jpg");
+    
+    background-position: center;
 }
 .nav__links {
   list-style: none;
@@ -42,7 +41,7 @@ body {
 }
 
 .item-image {
-  height: 320px;
+  height: 350px;
   width: 300px;
 }
 .item-price {

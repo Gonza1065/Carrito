@@ -110,24 +110,46 @@ function comprarButtonClicked() {
   updateShoppingCartTotal();
 }
 Swal.fire("¡Agrega al carrito la prenda que quieras!");
+const lista = document.querySelector("div");
+// fetch('/data.json')
+//   .then((resinicial) => resinicial.json())
+//   .then((data) => {
+//     data.forEach((nombre) => {
+//       const div = document.createElement("div");
+//       div.innerHTML = `
+//         <h4>${nombre.nombre}</h4>
+//           <p>${nombre.precio}</p>
+//           <p>${nombre.id}</p>
+//       `;
+//     });
 
-const lista = document.querySelector('div');
-fetch('/data.json')
-  .then((resinicial) => resinicial.json())
-  .then((data) => {
-    data.forEach((nombre) => {
-      const li = document.createComment("div");
-      div.innerHTML = `
+//     lista.append(div);
+//   })
+//   .catch((e) => {
+//     console.log(e);
+//   });
 
+const pedirPosts = async () => {
+  const resp = await fetch("./data.json");
+  const data = await resp.json();
+  data.forEach((nombres) => {
+    const div = document.createElement("div");
+    div.innerHTML = `
 
-        <h4>${nombre.nombre}</h4>
-          <p>${nombre.precio}</p>
-          <p>${nombre.id}</p> 
-      `;
-    });
-
-    lista.append(li);
-  })
-  .catch((e) => {
-    console.log(e);
+    <div class = "info-prenda">
+        <h3>${nombres.nombre}</h3>
+        <h4>${nombres.precio}</h4>
+        <h5>${nombres.id}</h5>
+    </div>
+    <style>
+    .info-prenda {
+      color: white
+    }
+    </style>
+    
+    
+    `;
+    lista.append(div);
   });
+};
+pedirPosts();
