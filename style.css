@@ -1,7 +1,7 @@
 body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("https://c.static-nike.com/a/images/w_1920,c_limit/mdbgldn6yg1gg88jomci/image.jpg");
-    background-position: center;
+  background-position: center;
 }
 .nav__links {
   list-style: none;
@@ -33,7 +33,10 @@ body {
   margin-left: 50px;
   margin-bottom: 10px;
 }
-
+.contenido {
+  display: flex;
+  justify-content: center;
+}
 .item-image {
   height: 350px;
   width: 300px;
@@ -76,7 +79,49 @@ body {
 .modal-body {
   color: black;
 }
-.contenido {
+footer {
+  margin-top: 100px;
+  color: white;
+}
+.redes-sociales {
   display: flex;
   justify-content: center;
+  justify-content: space-between;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-bottom: 50px;
 }
+.redes-sociales h2 {
+  font-family: "Playfair Display", serif;
+}
+.redes-sociales img {
+  height: 75px;
+  
+}
+
+/* footer {
+  background: white;
+}
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  margin-left: 30px;
+  margin-right: 30px;
+  background-color: white;
+} */
+/* .youtube img {
+  width: 150px;
+  
+}
+.twitter img {
+  width: 75px;
+  
+}
+.instagram img {
+  width: 100px;
+  
+}
+.instagram img:hover {
+  transition-duration: 3s;
+  color: #0088a9;
+} */
