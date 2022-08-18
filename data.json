@@ -1,8 +1,8 @@
 [
-  { "nombre": "Nike Air Force", "precio": 110, "id": 1 },
-  { "nombre": "Nike pantalon deportivo", "precio": 70, "id": 2 },
-  { "nombre": "Nike campera deportiva", "precio": 50, "id": 3 },
-  { "nombre": "Nike remera deportiva running", "precio": 30, "id": 4 },
-  { "nombre": "Nike zapatillas deportivas", "precio": 30, "id": 5 },
-  { "nombre": "Pantalon deportivo", "precio": 20, "id": 6 }
+  { "nombre": "Nike Air Force", "lanzamiento": "2021", "id": 1 },
+  { "nombre": "Nike Pantalon Deportivo", "lanzamiento": "2020", "id": 2 },
+  { "nombre": "Nike Campera Deportiva", "lanzamiento": "2022", "id": 3 },
+  { "nombre": "Nike Remera Deportiva Running", "lanzamiento": "2018", "id": 4 },
+  { "nombre": "Nike Zapatillas Deportivas", "lanzamiento": "2020", "id": 5 },
+  { "nombre": "Nike Pantalon Deportivo", "lanzamiento": "2022", "id": 6 }
 ]

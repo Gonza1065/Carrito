@@ -2,21 +2,17 @@ const addToShoppingCartButtons = document.querySelectorAll(".addToCart");
 addToShoppingCartButtons.forEach((addToCartButton) => {
   addToCartButton.addEventListener("click", addToCartClicked);
 });
-
 const comprarButton = document.querySelector(".comprarButton");
 comprarButton.addEventListener("click", comprarButtonClicked);
-
 const shoppingCartItemsContainer = document.querySelector(
   ".shoppingCartItemsContainer"
 );
 function addToCartClicked(event) {
   const button = event.target;
   const item = button.closest(".item");
-
   const itemTitle = item.querySelector(".item-title").textContent;
   const itemPrice = item.querySelector(".item-price").textContent;
   const itemImage = item.querySelector(".item-image").src;
-
   addItemToShoppingCart(itemTitle, itemPrice, itemImage);
 }
 function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
@@ -63,11 +59,9 @@ function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
     `;
   shoppingCartRow.innerHTML = shoppingCartContent;
   shoppingCartItemsContainer.append(shoppingCartRow);
-
   shoppingCartRow
     .querySelector(".buttonDelete")
     .addEventListener("click", removeShoppingCartItem);
-
   shoppingCartRow
     .querySelector(".shoppingCartItemQuantity")
     .addEventListener("change", quantityChanged);
@@ -101,7 +95,6 @@ function removeShoppingCartItem(event) {
 }
 function quantityChanged(event) {
   const input = event.target;
-
   input.value <= 0 ? (input.value = 1) : null;
   updateShoppingCartTotal();
 }
@@ -111,43 +104,32 @@ function comprarButtonClicked() {
 }
 Swal.fire("¡Agrega al carrito la prenda que quieras!");
 const lista = document.querySelector("div");
-// fetch('/data.json')
-//   .then((resinicial) => resinicial.json())
-//   .then((data) => {
-//     data.forEach((nombre) => {
-//       const div = document.createElement("div");
-//       div.innerHTML = `
-//         <h4>${nombre.nombre}</h4>
-//           <p>${nombre.precio}</p>
-//           <p>${nombre.id}</p>
-//       `;
-//     });
-
-//     lista.append(div);
-//   })
-//   .catch((e) => {
-//     console.log(e);
-//   });
-
 const pedirPosts = async () => {
   const resp = await fetch("./data.json");
   const data = await resp.json();
   data.forEach((nombres) => {
     const div = document.createElement("div");
     div.innerHTML = `
-
     <div class = "info-prenda">
-        <h3>${nombres.nombre}</h3>
-        <h4>${nombres.precio}</h4>
-        <h5>${nombres.id}</h5>
+        <h4>${nombres.nombre}</h4>
+        <h6>${nombres.id}</h6>
+    </div>
+    <div class = "lanzamiento">
+        <h5>Año de lanzamiento: ${nombres.lanzamiento}</h5>
     </div>
     <style>
     .info-prenda {
-      color: white
+      font-family: "Fira Sans", sans-serif;
+      display: flex;
+      justify-content: space-between;
+      color: white;  
+    }
+    .lanzamiento {
+      color: white;
+      font-family: 'Fira Sans', sans-serif;
+      margin-bottom: 40px;
     }
     </style>
-    
-    
     `;
     lista.append(div);
   });
